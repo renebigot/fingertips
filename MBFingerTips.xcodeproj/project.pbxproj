@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A741A7151826E8950060A6EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A741A7141826E8950060A6EE /* Foundation.framework */; };
+		A741A7231826E8950060A6EE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A741A7221826E8950060A6EE /* XCTest.framework */; };
+		A741A7241826E8950060A6EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A741A7141826E8950060A6EE /* Foundation.framework */; };
+		A741A7261826E8950060A6EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A741A7251826E8950060A6EE /* UIKit.framework */; };
+		A741A7291826E8950060A6EE /* libMBFingerTips.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A741A7111826E8950060A6EE /* libMBFingerTips.a */; };
+		A741A72F1826E8950060A6EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A741A72D1826E8950060A6EE /* InfoPlist.strings */; };
+		A741A7311826E8950060A6EE /* MBFingerTipsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A741A7301826E8950060A6EE /* MBFingerTipsTests.m */; };
+		A741A7451826E8D50060A6EE /* MBFingerTipWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A741A7441826E8D50060A6EE /* MBFingerTipWindow.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A741A7271826E8950060A6EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A741A7091826E8950060A6EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A741A7101826E8950060A6EE;
+			remoteInfo = MBFingerTips;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A741A70F1826E8950060A6EE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A741A7111826E8950060A6EE /* libMBFingerTips.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBFingerTips.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A741A7141826E8950060A6EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A741A7211826E8950060A6EE /* MBFingerTipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBFingerTipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A741A7221826E8950060A6EE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A741A7251826E8950060A6EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		A741A72C1826E8950060A6EE /* MBFingerTipsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MBFingerTipsTests-Info.plist"; sourceTree = "<group>"; };
+		A741A72E1826E8950060A6EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A741A7301826E8950060A6EE /* MBFingerTipsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBFingerTipsTests.m; sourceTree = "<group>"; };
+		A741A7431826E8D50060A6EE /* MBFingerTipWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBFingerTipWindow.h; path = fingertips/MBFingerTipWindow.h; sourceTree = SOURCE_ROOT; };
+		A741A7441826E8D50060A6EE /* MBFingerTipWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBFingerTipWindow.m; path = fingertips/MBFingerTipWindow.m; sourceTree = SOURCE_ROOT; };
+		A741A7511826EC1C0060A6EE /* MBFingerTips-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBFingerTips-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A741A70E1826E8950060A6EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A741A7151826E8950060A6EE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A741A71E1826E8950060A6EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A741A7231826E8950060A6EE /* XCTest.framework in Frameworks */,
+				A741A7291826E8950060A6EE /* libMBFingerTips.a in Frameworks */,
+				A741A7261826E8950060A6EE /* UIKit.framework in Frameworks */,
+				A741A7241826E8950060A6EE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A741A7081826E8950060A6EE = {
+			isa = PBXGroup;
+			children = (
+				A741A7161826E8950060A6EE /* MBFingerTips */,
+				A741A72A1826E8950060A6EE /* MBFingerTipsTests */,
+				A741A7131826E8950060A6EE /* Frameworks */,
+				A741A7121826E8950060A6EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A741A7121826E8950060A6EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A741A7111826E8950060A6EE /* libMBFingerTips.a */,
+				A741A7211826E8950060A6EE /* MBFingerTipsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A741A7131826E8950060A6EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A741A7141826E8950060A6EE /* Foundation.framework */,
+				A741A7221826E8950060A6EE /* XCTest.framework */,
+				A741A7251826E8950060A6EE /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A741A7161826E8950060A6EE /* MBFingerTips */ = {
+			isa = PBXGroup;
+			children = (
+				A741A7431826E8D50060A6EE /* MBFingerTipWindow.h */,
+				A741A7441826E8D50060A6EE /* MBFingerTipWindow.m */,
+				A741A7171826E8950060A6EE /* Supporting Files */,
+			);
+			path = MBFingerTips;
+			sourceTree = "<group>";
+		};
+		A741A7171826E8950060A6EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A741A7511826EC1C0060A6EE /* MBFingerTips-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A741A72A1826E8950060A6EE /* MBFingerTipsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A741A7301826E8950060A6EE /* MBFingerTipsTests.m */,
+				A741A72B1826E8950060A6EE /* Supporting Files */,
+			);
+			path = MBFingerTipsTests;
+			sourceTree = "<group>";
+		};
+		A741A72B1826E8950060A6EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A741A72C1826E8950060A6EE /* MBFingerTipsTests-Info.plist */,
+				A741A72D1826E8950060A6EE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A741A7101826E8950060A6EE /* MBFingerTips */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A741A7341826E8950060A6EE /* Build configuration list for PBXNativeTarget "MBFingerTips" */;
+			buildPhases = (
+				A741A70D1826E8950060A6EE /* Sources */,
+				A741A70E1826E8950060A6EE /* Frameworks */,
+				A741A70F1826E8950060A6EE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MBFingerTips;
+			productName = MBFingerTips;
+			productReference = A741A7111826E8950060A6EE /* libMBFingerTips.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A741A7201826E8950060A6EE /* MBFingerTipsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A741A7371826E8950060A6EE /* Build configuration list for PBXNativeTarget "MBFingerTipsTests" */;
+			buildPhases = (
+				A741A71D1826E8950060A6EE /* Sources */,
+				A741A71E1826E8950060A6EE /* Frameworks */,
+				A741A71F1826E8950060A6EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A741A7281826E8950060A6EE /* PBXTargetDependency */,
+			);
+			name = MBFingerTipsTests;
+			productName = MBFingerTipsTests;
+			productReference = A741A7211826E8950060A6EE /* MBFingerTipsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A741A7091826E8950060A6EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "René Bigot";
+			};
+			buildConfigurationList = A741A70C1826E8950060A6EE /* Build configuration list for PBXProject "MBFingerTips" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A741A7081826E8950060A6EE;
+			productRefGroup = A741A7121826E8950060A6EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A741A7101826E8950060A6EE /* MBFingerTips */,
+				A741A7201826E8950060A6EE /* MBFingerTipsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A741A71F1826E8950060A6EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A741A72F1826E8950060A6EE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A741A70D1826E8950060A6EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A741A7451826E8D50060A6EE /* MBFingerTipWindow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A741A71D1826E8950060A6EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A741A7311826E8950060A6EE /* MBFingerTipsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A741A7281826E8950060A6EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A741A7101826E8950060A6EE /* MBFingerTips */;
+			targetProxy = A741A7271826E8950060A6EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A741A72D1826E8950060A6EE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A741A72E1826E8950060A6EE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A741A7321826E8950060A6EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A741A7331826E8950060A6EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A741A7351826E8950060A6EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				DSTROOT = /tmp/MBFingerTips.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MBFingerTips-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A741A7361826E8950060A6EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				DSTROOT = /tmp/MBFingerTips.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MBFingerTips-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A741A7381826E8950060A6EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MBFingerTips/MBFingerTips-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MBFingerTipsTests/MBFingerTipsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A741A7391826E8950060A6EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MBFingerTips/MBFingerTips-Prefix.pch";
+				INFOPLIST_FILE = "MBFingerTipsTests/MBFingerTipsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A741A70C1826E8950060A6EE /* Build configuration list for PBXProject "MBFingerTips" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A741A7321826E8950060A6EE /* Debug */,
+				A741A7331826E8950060A6EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A741A7341826E8950060A6EE /* Build configuration list for PBXNativeTarget "MBFingerTips" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A741A7351826E8950060A6EE /* Debug */,
+				A741A7361826E8950060A6EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A741A7371826E8950060A6EE /* Build configuration list for PBXNativeTarget "MBFingerTipsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A741A7381826E8950060A6EE /* Debug */,
+				A741A7391826E8950060A6EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A741A7091826E8950060A6EE /* Project object */;
+}

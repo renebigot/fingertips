@@ -356,7 +356,7 @@
 
 @end
 
-#pragma mark -
+#pragma mark - 
 
 @implementation MBFingerTipView
 

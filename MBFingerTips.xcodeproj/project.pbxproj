@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7182B061826EDBE00008E93 /* MBFingerTipWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A7182B051826EDBE00008E93 /* MBFingerTipWindow.m */; };
 		A741A7151826E8950060A6EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A741A7141826E8950060A6EE /* Foundation.framework */; };
 		A741A7231826E8950060A6EE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A741A7221826E8950060A6EE /* XCTest.framework */; };
 		A741A7241826E8950060A6EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A741A7141826E8950060A6EE /* Foundation.framework */; };
@@ -14,7 +15,6 @@
 		A741A7291826E8950060A6EE /* libMBFingerTips.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A741A7111826E8950060A6EE /* libMBFingerTips.a */; };
 		A741A72F1826E8950060A6EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A741A72D1826E8950060A6EE /* InfoPlist.strings */; };
 		A741A7311826E8950060A6EE /* MBFingerTipsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A741A7301826E8950060A6EE /* MBFingerTipsTests.m */; };
-		A741A7451826E8D50060A6EE /* MBFingerTipWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A741A7441826E8D50060A6EE /* MBFingerTipWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +40,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A7182B041826EDBE00008E93 /* MBFingerTipWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFingerTipWindow.h; sourceTree = SOURCE_ROOT; };
+		A7182B051826EDBE00008E93 /* MBFingerTipWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFingerTipWindow.m; sourceTree = SOURCE_ROOT; };
 		A741A7111826E8950060A6EE /* libMBFingerTips.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBFingerTips.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A741A7141826E8950060A6EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A741A7211826E8950060A6EE /* MBFingerTipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBFingerTipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,8 +50,6 @@
 		A741A72C1826E8950060A6EE /* MBFingerTipsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MBFingerTipsTests-Info.plist"; sourceTree = "<group>"; };
 		A741A72E1826E8950060A6EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A741A7301826E8950060A6EE /* MBFingerTipsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBFingerTipsTests.m; sourceTree = "<group>"; };
-		A741A7431826E8D50060A6EE /* MBFingerTipWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBFingerTipWindow.h; path = fingertips/MBFingerTipWindow.h; sourceTree = SOURCE_ROOT; };
-		A741A7441826E8D50060A6EE /* MBFingerTipWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBFingerTipWindow.m; path = fingertips/MBFingerTipWindow.m; sourceTree = SOURCE_ROOT; };
 		A741A7511826EC1C0060A6EE /* MBFingerTips-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBFingerTips-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -108,8 +108,8 @@
 		A741A7161826E8950060A6EE /* MBFingerTips */ = {
 			isa = PBXGroup;
 			children = (
-				A741A7431826E8D50060A6EE /* MBFingerTipWindow.h */,
-				A741A7441826E8D50060A6EE /* MBFingerTipWindow.m */,
+				A7182B041826EDBE00008E93 /* MBFingerTipWindow.h */,
+				A7182B051826EDBE00008E93 /* MBFingerTipWindow.m */,
 				A741A7171826E8950060A6EE /* Supporting Files */,
 			);
 			path = MBFingerTips;
@@ -222,7 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A741A7451826E8D50060A6EE /* MBFingerTipWindow.m in Sources */,
+				A7182B061826EDBE00008E93 /* MBFingerTipWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

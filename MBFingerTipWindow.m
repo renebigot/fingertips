@@ -1,11 +1,17 @@
 //
-//  DSFingerTipWindow.m
+//  MBFingerTipWindow.m
 //
 //  Created by Justin R. Miller on 3/29/11.
-//  Copyright 2011-2012 Development Seed. All rights reserved.
+//  Copyright 2011-2013 MapBox. All rights reserved.
 //
 
-#import "DSFingerTipWindow.h"
+#import "MBFingerTipWindow.h"
+
+// This file must be built with ARC.
+//
+#if !__has_feature(objc_arc)
+    #error "ARC must be enabled for MBFingerTipWindow.m"
+#endif
 
 // Turn this on to debug touches during development.
 //
@@ -15,7 +21,7 @@
     #define DEBUG_FINGERTIP_WINDOW 0
 #endif
 
-@interface DSFingerTipView : UIImageView
+@interface MBFingerTipView : UIImageView
 
 @property (nonatomic, assign) NSTimeInterval timestamp;
 @property (nonatomic, assign) BOOL shouldAutomaticallyRemoveAfterTimeout;
@@ -25,13 +31,13 @@
 
 #pragma mark -
 
-@interface DSFingerTipWindow ()
+@interface MBFingerTipWindow ()
 
 @property (nonatomic, strong) UIWindow *overlayWindow;
 @property (nonatomic, assign) BOOL active;
 @property (nonatomic, assign) BOOL fingerTipRemovalScheduled;
 
-- (void)DSFingerTipWindow_commonInit;
+- (void)MBFingerTipWindow_commonInit;
 - (BOOL)anyScreenIsMirrored;
 - (void)updateFingertipsAreActive;
 - (void)scheduleFingerTipRemoval;
@@ -44,16 +50,9 @@
 
 #pragma mark -
 
-@implementation DSFingerTipWindow
+@implementation MBFingerTipWindow
 
-@synthesize touchImage;
-@synthesize touchAlpha;
-@synthesize fadeDuration;
-@synthesize overlayWindow;
-@synthesize active;
-@synthesize fingerTipRemovalScheduled;
-@synthesize fillColor;
-@synthesize strokeColor;
+@synthesize touchImage=_touchImage;
 
 - (id)initWithCoder:(NSCoder *)decoder
 {
@@ -62,7 +61,7 @@
     self = [super initWithCoder:decoder];
 
     if (self != nil)
-        [self DSFingerTipWindow_commonInit];
+        [self MBFingerTipWindow_commonInit];
     
     return self;
 }
@@ -74,25 +73,25 @@
     self = [super initWithFrame:rect];
     
     if (self != nil)
-        [self DSFingerTipWindow_commonInit];
+        [self MBFingerTipWindow_commonInit];
     
     return self;
 }
 
-- (void)DSFingerTipWindow_commonInit
+- (void)MBFingerTipWindow_commonInit
 {
-    strokeColor = [UIColor blackColor];
-    fillColor = [UIColor whiteColor];
+    self.strokeColor = [UIColor blackColor];
+    self.fillColor = [UIColor whiteColor];
     
-    overlayWindow = [[UIWindow alloc] initWithFrame:self.frame];
+    self.overlayWindow = [[UIWindow alloc] initWithFrame:self.frame];
     
-    overlayWindow.userInteractionEnabled = NO;
-    overlayWindow.windowLevel = UIWindowLevelStatusBar;
-    overlayWindow.backgroundColor = [UIColor clearColor];
-    overlayWindow.hidden = NO;
+    self.overlayWindow.userInteractionEnabled = NO;
+    self.overlayWindow.windowLevel = UIWindowLevelStatusBar;
+    self.overlayWindow.backgroundColor = [UIColor clearColor];
+    self.overlayWindow.hidden = NO;
 
-    touchAlpha   = 0.5;
-    fadeDuration = 0.3;
+    self.touchAlpha   = 0.5;
+    self.fadeDuration = 0.3;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(screenConnect:)
@@ -119,7 +118,7 @@
 
 - (UIImage *)touchImage
 {
-    if ( ! touchImage)
+    if ( ! _touchImage)
     {
         UIBezierPath *clipPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, 50.0, 50.0)];
         
@@ -133,20 +132,20 @@
 
         drawPath.lineWidth = 2.0;
         
-        [strokeColor setStroke];
-        [fillColor setFill];
+        [self.strokeColor setStroke];
+        [self.fillColor setFill];
 
         [drawPath stroke];
         [drawPath fill];
         
         [clipPath addClip];
         
-        touchImage = UIGraphicsGetImageFromCurrentImageContext();
+        _touchImage = UIGraphicsGetImageFromCurrentImageContext();
         
         UIGraphicsEndImageContext();
     }
         
-    return touchImage;
+    return _touchImage;
 }
 
 #pragma mark -
@@ -202,7 +201,7 @@
                 case UITouchPhaseMoved:
                 case UITouchPhaseStationary:
                 {
-                    DSFingerTipView *touchView = (DSFingerTipView *)[self.overlayWindow viewWithTag:touch.hash];
+                    MBFingerTipView *touchView = (MBFingerTipView *)[self.overlayWindow viewWithTag:touch.hash];
 
                     if (touch.phase != UITouchPhaseStationary && touchView != nil && [touchView isFadingOut])
                     {
@@ -212,7 +211,7 @@
                     
                     if (touchView == nil && touch.phase != UITouchPhaseStationary)
                     {
-                        touchView = [[DSFingerTipView alloc] initWithImage:self.touchImage];
+                        touchView = [[MBFingerTipView alloc] initWithImage:self.touchImage];
                         [self.overlayWindow addSubview:touchView];
                     }
             
@@ -267,9 +266,10 @@
     NSTimeInterval now = [[NSProcessInfo processInfo] systemUptime];
     const CGFloat REMOVAL_DELAY = 0.2;
 
-    for (DSFingerTipView *touchView in [self.overlayWindow subviews])
+    for (MBFingerTipView *touchView in [self.overlayWindow subviews])
     {
-        NSAssert([touchView isKindOfClass:[DSFingerTipView class]], @"Unexpected touch view.");
+        if ( ! [touchView isKindOfClass:[MBFingerTipView class]])
+            continue;
         
         if (touchView.shouldAutomaticallyRemoveAfterTimeout && now > touchView.timestamp + REMOVAL_DELAY)
             [self removeFingerTipWithHash:touchView.tag animated:YES];
@@ -281,11 +281,9 @@
 
 - (void)removeFingerTipWithHash:(NSUInteger)hash animated:(BOOL)animated;
 {
-    DSFingerTipView *touchView = (DSFingerTipView *)[self.overlayWindow viewWithTag:hash];
-    if (touchView == nil)
+    MBFingerTipView *touchView = (MBFingerTipView *)[self.overlayWindow viewWithTag:hash];
+    if ( ! [touchView isKindOfClass:[MBFingerTipView class]])
         return;
-    
-    NSAssert([touchView isKindOfClass:[DSFingerTipView class]], @"Unexpected touch view.");
     
     if ([touchView isFadingOut])
         return;
@@ -360,10 +358,6 @@
 
 #pragma mark -
 
-@implementation DSFingerTipView
-
-@synthesize timestamp;
-@synthesize shouldAutomaticallyRemoveAfterTimeout;
-@synthesize fadingOut;
+@implementation MBFingerTipView
 
 @end

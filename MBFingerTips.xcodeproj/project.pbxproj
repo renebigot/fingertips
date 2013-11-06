@@ -188,6 +188,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "René Bigot";
+				TargetAttributes = {
+					A741A7201826E8950060A6EE = {
+						TestTargetID = A741A7101826E8950060A6EE;
+					};
+				};
 			};
 			buildConfigurationList = A741A70C1826E8950060A6EE /* Build configuration list for PBXProject "MBFingerTips" */;
 			compatibilityVersion = "Xcode 3.2";
